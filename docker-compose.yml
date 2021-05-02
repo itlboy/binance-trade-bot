@@ -4,7 +4,7 @@ version: "3"
 services:
   crypto-trading:
     build: .
-    container_name: binance_trader
+    #container_name: binance_trader
     volumes:
     - ./user.cfg:/app/user.cfg
     - ./data:/app/data
@@ -13,7 +13,7 @@ services:
     
   sqlitebrowser:
     image: ghcr.io/linuxserver/sqlitebrowser
-    container_name: sqlitebrowser
+    #container_name: sqlitebrowser
     environment:
       - PUID=1000
       - PGID=1000
