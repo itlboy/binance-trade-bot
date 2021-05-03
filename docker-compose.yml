@@ -6,10 +6,11 @@ services:
     build: .
     #container_name: binance_trader
     volumes:
-    - ./user.cfg:/app/user.cfg
-    - ./data:/app/data
-    - ./logs:/app/logs
-    - ./supported_coin_list:/app/supported_coin_list
+      - ./user.cfg:/app/user.cfg
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./supported_coin_list:/app/supported_coin_list
+    restart: unless-stopped
     
   sqlitebrowser:
     image: ghcr.io/linuxserver/sqlitebrowser
